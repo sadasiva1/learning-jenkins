@@ -3,7 +3,7 @@ pipeline {
 
  environment {
   ABC="abc"
-  SSH= credentials("SSH")
+  devops= credentials("devops")
  }
 
   stages {
@@ -14,7 +14,7 @@ pipeline {
      steps {
        echo 'Hello World'
        echo "${XYZ}"
-       echo "${SSH}"
+       echo "${devops}"
      }
     }
    }
