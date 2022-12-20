@@ -1,11 +1,17 @@
 pipeline {
-    agent any
+  agent any
 
-    stages {
-        stage('New') {
-            steps {
-                echo 'Hello World'
-            }
-        }
+  stages {
+   stage('New') {
+     steps {
+       echo 'Hello World'
+     }
     }
+   }
+
+   post{
+    always {
+     echo 'OK'
+    }
+  }
 }
